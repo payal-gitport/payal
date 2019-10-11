@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Blues | Payal Meena</title>
+	<meta charset="utf-8">
+
+	<!-- Small Icon that appears in the brower's tab -->
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">					
+
+	<!-- To ensure proper rendering and touch zooming in Mobile Phones-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+
+	<!-- For Font-Aswesome Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Latest compiled and minified Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Satisfy|Questrial|Roboto" rel="stylesheet">
+
+	<!--plugins for animation in portfolio -->
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript">new WOW().init();</script>
+
+
+	<!-- CSS -->
+	<style type="text/css">
+		body{
+			line-height: 1.4px;
+			font:400 15px 'Roboto', sans-serif;
+			letter-spacing: 0.5px;
+			color: #333
+		}
+		a{
+			outline: none;
+		}
+		.bg-header{
+			background: url(img/bg-banner.jpg) no-repeat fixed;
+			background-size: cover;
+			min-height: 630px;
+			position:relative;
+		}
+		.header-bg-gray{
+			background-color:rgba(0,0,0,0.67);
+			min-height: 650px;
+		}
+		.container-fluid{
+			padding: 0px;
+		}
+		/*NAVBAR++++++++++++++++++++*/
+		.navbar{
+			padding: 3px 16px ;
+		}
+		.navbar .navbar-nav .active{
+			font-size: 18px;
+			font-weight: 600;
+		}
+		.navbar-nav>li>a{
+			font-size: 18px;
+			font-weight: 400;
+			color: #fff
+			outline:none;
+		}
+		.active{
+			opacity:1;
+		}
+		.navbar-nav .nav-item .nav-link{
+			transition:0.3s ease;
+		}
+		.navbar-nav .nav-item .nav-link:hover{
+			transition:0.3s ease;
+			font-size: 30px;
+		}
+		.navbar-dark .navbar-toggler:hover, .navbar-dark .navbar-toggler:active{
+			background-color: rgba(255,255,255,0.2);
+			transition: 0.3s ease;
+		}
+		button:focus{
+			outline: none;
+			background-color: rgba(255,255,255,0.1);
+
+/*BANNER TEXT*/
+		}
+		.banner-text{
+			border-left:5px solid #BE2525;
+			padding: 15px 40px;
+			color: #fff;
+			margin: 170px;
+		}
+		.banner-text h2, .banner-text p{
+			font:400 40px 'Questrial', sans-serif;
+		}
+		.banner-text p{
+			/*height: 20px;
+			line-height: 4.4px;*/
+		}
+		.decorate{
+			font-family: 'Satisfy',cursive;
+		}
+		.scroll-to-about a i{
+			text-align: center;
+			position: absolute;
+			bottom: 140px;
+			font-size: 24px;
+			color: #FFF;
+			width: 40px;
+			height: 40px;
+			border: 1px solid #FFF;
+			line-height: 40px;
+			border-radius: 50%;
+		}
+/*ABOUT +++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+		
+		.section-padding{
+			padding: 60px 0px;
+		}	
+		#about{
+			background: url(img/about-banner.jpg) no-repeat;
+			background-size:cover;
+			margin-bottom: -3px;
+
+		}
+		.title-text{
+			padding: 0 25px 0  0;
+			border-right: 5px solid #BE2525;
+			font-size: 24px;
+		}
+		.about-list li{
+			padding: 5px 0;
+			font-size: 18px;
+		}
+		.about-text p{
+			color: #444;
+		}
+		/* portfolio++++++++++++++++++++*/
+		#portfolio{
+			background-color: #f0f1e9;
+		}
+		.fit-image{
+		height:100%;
+		width: 100%;
+		}
+		.title{
+			font-size: 24px;
+			margin-bottom: 50px;
+		}
+		#my-grid{
+			margin-top: 50px;
+		}
+
+		.grid-padding{
+			padding: 0.8px;
+		}
+		.grid-padding img{
+			margin-bottom: 15px;
+			transition :0.8s ease;
+		}
+		.grid-padding img:hover{
+			box-shadow: 0 10px 40px 0 rgba(0,0,0,0.5);
+			transition :0.8s ease;
+		}
+		.col-sm-4{
+			padding-right: 30px;  
+		}
+
+		/* The MODAL*/
+		.modal{
+			display: none;
+			position: fixed;
+			z-index: 1;
+			padding: 5px 0;
+			left: 0;
+			top:0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0,0,0,0.8);
+		}
+		.modal-content{
+			position: relative;
+			margin: auto;
+			padding:0;
+			width: 85%;
+			max-width: 1200px;
+			border: none;
+			background-color: transparent;
+		}
+		.my-slides{
+			text-align: center;
+		}
+		.portrait-image{
+			height: 98vh;
+		}
+		.lanscape-image{
+			width: 76vw;
+		}
+		.close{
+			color: #fff;
+			position: absolute;
+			top: 10px;
+			right: 25px;
+			font-size: 48px;
+			transition: 0.4s ease;
+		}
+		.close:hover, .close:focus{
+			color: #fff;
+			text-decoration:none;
+			cursor: pointer;
+		} 
+		.prev, .next{
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			padding: 16px;
+			margin-top: 50px;
+			color: #fff !important;
+			font-weight: bold;
+			font-size: 3em;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+			-webkit-user-select:none;
+		}
+		.next{
+			right: 0;
+			border-radius: 0 3px 3px 0;
+		}
+		.prev:hover, .next:hover{
+			background-color: rgba(0,0,0,0.8);
+		}
+		/*numbertext (1/15)*/
+		.numbertext{
+			color: grey;
+			font-size: 18px;
+			font-family: Lato, sans-serif;
+			padding: 8px 50px;
+			position: absolute;
+			top: 0;
+			left: 10px;
+		}
+
+		/*Testimonial+++++++++++++++++*/
+		#testimonial .container-fluid{
+			padding: 100px;
+			background-color: #C0C0BA;
+		}
+
+		/*Carousel++++++*/
+		.carousel-inner  .carousel-item .img-box{
+			width: 235px;
+			height: 235px;
+		}
+		.carousel-control-prev{
+			left: -100px;
+		}
+		.carousel.control-right{
+			right: -100px;
+		}
+		.carsousel-indicator{
+			top:200px;
+			margin-bottom: 20px;
+		}
+
+		/* Contact Form +++++++++*/
+
+		.contact-sec h2{
+			font-size: 28px;
+			color: #FFF;
+			font-weight: 600;
+			padding: 15px 0px;
+
+		}
+		.contact-sec p{
+			color: #FFF;
+			font-size: 18px;
+			padding: 16px 0 24px;
+		}
+		#contact{
+			width: 100%;
+			background-color: rgba(8,7,7,0.90);
+		}
+		section#contact div.container{
+			padding: 5%;
+		}
+		#contact .btn-primary{
+			background-color: #BE2525;
+			border: 1px solid #BE2525;
+		}
+		#contact .btn-primary:hover{
+			background-color: #721616;
+		}
+
+		/*footer*/
+		footer{
+			padding: 40px 0;
+			background-color: #F2F3EB;
+		}
+		footer a{
+			color: #BE2525;
+		}
+		footer a:hover{
+			text-decoration:none;
+		}
+		.social-list li{
+			transition:; 0.3s ease;
+			opacity: 0.5;
+			display: inline-block;
+			margin-bottom: 0;
+		}
+		.social-list li a{
+			font-size: 28px;
+			margin-right: 15px;
+
+		}
+		.fa-angle-up{
+			font-size: 28px;
+			color: #000;
+			width: 40px;
+			border: 1px solid #000;
+			line-height: 40px;
+			border-radius: 50%;
+		}
+
+
+		/*Media query++++++++++++++++*/
+		@media screen and (max-width: 768px){
+			.close{
+				font-size: 1.5em;
+			}
+			p{
+				font-size: 1em !important;
+			}
+			h2{
+				font-size: 1.5em !important;
+			}
+			.numbertext{
+				font-size: 1em;
+			}
+			.prev, .next{
+				font-size: 2em;
+			}
+		}
+		@media screen and (max-width: 480px){
+			.close{
+				font-size: 1em;
+			}
+			p{
+				font-size: 1em !important;
+			}
+			h2{
+				font-size: 1.25em !important;
+			}
+			.numbertext{
+				font-size: 0.75em;
+			}
+			.prev, .next{
+				font-size: 1.5em;
+			}
+			.social-list{
+				margin-bottom: 15px;
+			}
+		}
+		@media screen and (max-width: 630px){
+			.carousel-indicators{
+				top:360px;
+			}
+		}
+		@media screen and (max-width: 525px){
+			.carousel-indicators{
+				top:420px;
+			}
+		}
+		@media screen and (max-width: 490px){
+			.banner-text{
+				border-left:2px solid #BE2525;
+				color: #fff;
+				margin: 10px;
+    		}
+    		.scroll-to-about a i{
+				text-align: center;
+				position: relative;
+				bottom: 4px;
+				font-size: 24px;
+				color: #FFF;
+				width: 40px;
+				height: 40px;
+				border: 1px solid #FFF;
+				line-height: 40px;
+				border-radius: 50%;
+			}
+			section#testimonial{
+				display: none;
+			}
+			.carousel{
+				display: none;
+			}
+		}
+
+
+	</style>
+</head>
+
+<body id='my-portfolio' data-spy="scroll" data-target =".navbar" data-offset="60">
+		<!------Header -->
+		<header class="container-fluid bg-header" id = "home">
+			<div class="header-bg-gray">
+				<nav class="navbar navbar-dark bg-dark text-center fixted-top " id = "mmy-navbar">
+					<a href="#home" class="navbar-brand"><img src="img/bw-logo-t3.png" style="height: 35px"> </a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon" ></span>
+					</button>
+					<!-- NAVBAR LINKS -->
+					<div class="collapse navbar-collapse" id="navbar-content">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item">
+								<a href="#home" class="nav-link"> Home</a>
+							</li>
+							<li class="nav-item">
+								<a href="#about" class="nav-link"> About</a>
+							</li>
+							<li class="nav-item">
+								<a href="#portfolio" class="nav-link"> Portfolio</a>
+							</li>
+							<li class="nav-item">
+								<a href="#testimonial" class="nav-link"> Testimonial</a>
+							</li>
+							<li class="nav-item">
+								<a href="#contact" class="nav-link"> Contact</a>	
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 wow bounceInUp" data-wow-delay="0.2s">
+						<div class="banner-text">
+							<h2>Hi, I'm <span class="decorate">Payal</span> Meena &#128075;</h2>
+							<p>A creative photographer <br>&amp; Web Designer. </p>
+							<!--<p>I'm looking for amazing opportunity.</p>-->
+						</div>
+						<div class="scroll-to-about text-center">
+							<li>
+							<a href="#about"><i class="fa fa-angle-down"></i> </a>
+							</li>
+						</div>
+					</div>
+					</div>	
+				</div>
+			</div>
+		</header>
+	<!-- ABOUT ++++++++++++++++++++++++++++++++++ -->
+		<section id="about" class="section-padding wow fadeIn" data-wow-delay="0.5s">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 text-right">
+						<h2 class="title-text">
+							Meet<br><span class="decorate">Payal</span> Meena
+							
+						</h2>
+						
+					</div>
+					<div class="col-md-6 text-left">
+						<div class="about-text">
+							<p>
+								wehfwwwwwwwwehfweiuuuufiuewwwwwwwww fewwwwwwwwwwwwwww fewuiiiiiiiiiii eiuwwwwwwwwwwwww qiueweeee eifuuuuuuuuuuuuuuuuu efwiuuuuuuuuuuuuuuy fewiuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu fey weiu fewiuwe yfuyef ef ufeyiuwe eu ew f ef feyfewuf fui fiefyeiufe f</p>
+								<p>&nbsp;</p>
+
+								<p>
+									ewiudywiewe iuewyriuew rweriuyw eri erewiyr wie ew iewr weiury reieyr iewi rier weiru weiq wq ewq   iure riewuyriuewyreiuwr yiewr r iewuryw ie iurewiyewyrw  iuyrewyiuewry ewr iewuryrw er iueryreiu eriuwqyuireyf wri qewifiueqw yfr ireuyqr qrei ewiu 
+								</p>
+								<p>&nbsp;</p>
+								<ul class="about-list">
+									<li>iudhiuewd ieuwhd wed hu xihiuw </li>
+									<li>iudhiuewd ieuwhd wed hu xihiuw </li>
+									<li>iudhiuewd ieuwhd wed hu xihiuw </li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--- Portfolio+++++++++++++++++ -->
+		<section class="section-padding" id="portfolio">
+			<div class="container">
+				<div class="row">
+					<div class="cil-sm-12">
+						<h2 class="title text-center">Let's <span class="decorate">See</span> My Work</h2>
+					</div>
+					<div class="container">
+						<div id="my-grid" class="grid-padding">
+							<div class="row">
+								<!-- first coloum -->
+								<div class="col-sm-4">
+									<div class="row"><img src="img/portfolio01.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.6s" onclick="openModal();currentSlide(1)"></div>
+									<div class="row"><img src="img/portfolio04.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.8s" onclick="openModal();currentSlide(2)"></div>
+									<div class="row"><img src="img/portfolio05.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.10s" onclick="openModal();currentSlide(3)"></div>
+									<div class="row"><img src="img/portfolio01.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.12s" onclick="openModal();currentSlide(4)"></div>
+								</div>
+								<!-- second coloum -->
+								<div class="col-sm-4">
+									<div class="row"><img src="img/portfolio02.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.7s" onclick="openModal();currentSlide(5)"></div>
+									<div class="row"><img src="img/portfolio04.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.9s" onclick="openModal();currentSlide(6)"></div>
+									<div class="row"><img src="img/portfolio05.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.11s" onclick="openModal();currentSlide(7)"></div>
+									<div class="row"><img src="img/portfolio01.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.13s" onclick="openModal();currentSlide(8)"></div>
+									<div class="row"><img src="img/portfolio03.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.14s" onclick="openModal();currentSlide(9)"></div>
+								</div>
+								<!-- third coloum -->
+								<div class="col-sm-4">
+									<div class="row"><img src="img/portfolio04.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.1s" onclick="openModal();currentSlide(10)"></div>
+									<div class="row"><img src="img/portfolio01.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.3s" onclick="openModal();currentSlide(11)"></div>
+									<div class="row"><img src="img/portfolio02.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.2s" onclick="openModal();currentSlide(12)"></div>
+									<div class="row"><img src="img/portfolio03.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.4s" onclick="openModal();currentSlide(13)"></div>
+									<div class="row"><img src="img/portfolio02.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.6s" onclick="openModal();currentSlide(14)"></div>
+									<div class="row"><img src="img/portfolio05.jpg" class="fit-image wow fadeInLeft" data-wow-delay="0.5s" onclick="openModal();currentSlide(15)"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- MODAL for full screen image view begins -->
+		<div id="my-modal" class="modal">
+			<!--close button -->
+			<span class="close" onclick="closeModal()">&times;</span>
+			<!--Content for modal -->
+			<div class="modal-content">
+				<!--image for modal slide show -->
+				<div class="my-slides">
+					<div class="numbertext">1 / 15</div>
+					<img src="img/portfolio01.jpg" class="portrait-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">2 / 15</div>
+					<img src="img/portfolio04.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">3 / 15</div>
+					<img src="img/portfolio05.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">4 / 15</div>
+					<img src="img/portfolio01.jpg" class="portrait-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">5 / 15</div>
+					<img src="img/portfolio02.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">6 / 15</div>
+					<img src="img/portfolio04.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">7 / 15</div>
+					<img src="img/portfolio05.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">8 / 15</div>
+					<img src="img/portfolio01.jpg" class="portrait-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">9 / 15</div>
+					<img src="img/portfolio03.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">10 / 15</div>
+					<img src="img/portfolio04.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">11/ 15</div>
+					<img src="img/portfolio01.jpg" class="portrait-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">12/ 15</div>
+					<img src="img/portfolio02.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">13/ 15</div>
+					<img src="img/portfolio03.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">14/ 15</div>
+					<img src="img/portfolio02.jpg" class="landscape-image">
+				</div>
+				<div class="my-slides">
+					<div class="numbertext">15/ 15</div>
+					<img src="img/portfolio05.jpg" class="landscape-image">
+				</div>
+
+				<!--NEXT AND PREVIOUS BUTTON -->
+
+				<a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+				<a class="next" onclick="changeSlides(1)">&#10095;</a>
+			</div>
+		</div>
+
+		<!-- Testimonial +++++++++++++++++++ -->
+		<section id="testimonial" class="wow fadeInUp">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="text-center title text-dark"> <strong>Testimonials</strong></h2>
+
+						<div class="carousel slide" id="my-carousel" data-ride="carousel">
+							<ol class="carousel-indicators">
+							<li data-target = "#my-carousel" data-slide-to="0"></li> 
+							<li data-target = "#my-carousel" data-slide-to="2"></li> 
+							<li data-target = "#my-carousel" data-slide-to="3"></li> 
+							</ol>
+
+							<div class="carousel-inner">
+								<div class="carousel-item text-center active">
+									<div class="img-box border rounded-circle m-auto">
+										<img src="img/profile-1.jpg" class="d-block w-100 rounded-circle">
+									</div>
+									<h5 class="py-1 my-1"><strong class="text-Warning text-uppercase">paul barrow</strong></h5>
+									<h6 class="text-dark m-1"> Web Dveloper</h6>
+									<p class="pt-3 text-white"> eduihwoid widhqwie eoiu8u32 eiduewu wiewuyei eiuyewiu iureyiewu riewury. weiurywue eduihwoidyei. qiuwyw	ier e qwiuiey reiyueyriq 	uiyriue	yr riewuryiew. eiuyewiuyeiwueiue.</p>
+									
+								</div>
+								<div class="carousel-item text-center">
+									<div class="img-box border rounded-circle m-auto">
+										<img src="img/profile-2.jpg" class="d-block w-100 rounded-circle">
+									</div>
+									<h5 class="py-1 my-1"><strong class="text-Warning text-uppercase">Ray barrow</strong></h5>
+									<h6 class="text-dark m-1"> Web Dveloper</h6>
+									<p class="pt-3 text-white"> eduihwoid widhqwie eoiu8u32 eiduewu wiewuyei eiuyewiu iureyiewu riewury. weiurywue eduihwoidyei. qiuwyw	ier e qwiuiey reiyueyriq 	uiyriue	yr riewuryiew. eiuyewiuyeiwueiue.</p>
+									
+								</div>
+								<div class="carousel-item text-center">
+									<div class="img-box border rounded-circle m-auto">
+										<img src="img/profile-3.jpg" class="d-block w-100 rounded-circle">
+									</div>
+									<h5 class="py-1 my-1"><strong class="text-Warning text-uppercase">Blue barrow</strong></h5>
+									<h6 class="text-dark m-1"> Web Dveloper</h6>
+									<p class="pt-3 text-white"> eduihwoid widhqwie eoiu8u32 eiduewu wiewuyei eiuyewiu iureyiewu riewury. weiurywue eduihwoidyei. qiuwyw	ier e qwiuiey reiyueyriq 	uiyriue	yr riewuryiew. eiuyewiuyeiwueiue.</p>
+									
+								</div>
+								
+							</div>
+							
+							<a href="#my-carousel" class="carousel-control-prev" role="button" data-slide ="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a href="#my-carousel" class="carousel-control-next" role="button" data-slide ="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</section>
+		<!-- Contact ++++++++++++++++++++++ -->
+		<section class="section-padding wow fadeIn" data-wow-delay="0.4s" id="contact">
+			<div class="container">
+				<div class="contact-sec text-center">
+					<h2>Want to <span class="decorate">Hire </span>Me?</h2>
+					<p>ewhdwiue eiuuuiweqy ewiuyewiru eiuywqiey</p>
+
+				</div>
+				<!-- input form -->
+				<div class="container">
+					<form class="contactform" method="post" role="form">
+						<div class="form-group">
+							<input type="text" name="name" class="form-control" placeholder="Name" data-rule="minlen:4">
+							
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" class="form-control" placeholder="E-mail" data-rule="Email">
+							
+						</div>
+						<div class="form-group">
+							<input type="text" name="Subject" class="form-control" placeholder="Subject" data-rule="minlen:4">
+							
+						</div>
+						<div class="form-group">
+							<textarea type="text" name="message" class="form-control" placeholder="Type your message here" rows="5" data-rule="required">
+							</textarea>
+						</div>
+						<div class="text-center">
+							<button class="btn btn-primary btn-lg" type="submit" >Send Message</button>
+							
+						</div>
+
+						
+					</form>
+					
+				</div>
+
+				
+			</div>
+			
+		</section>
+		<!-- Footer ++++++++++++++++ -->
+		<footer class="text-center">
+			<div class="container">
+				<div class="d-flex flex-wrap justify-content-center">
+					<div class="mr-sm-auto p-2">
+						All Rightd Reserved.
+						<div class="credits">
+							Designed by <a href="#">The Blues</a>
+						</div>
+						
+					</div>
+
+					<div class="p-2">
+						<ul class="social-list">
+							<li><a href="#"><i class="fa fa-twitter"></i> </a> </li>
+							<li><a href="#"><i class="fa fa-facebook"></i> </a> </li>
+							<li><a href="#"><i class="fa fa-youtube"></i> </a> </li>
+							<li><a href="#"><i class="fa fa-instagram"></i> </a> </li>
+							
+						</ul>
+						
+					</div>
+					
+				</div>
+				<div class="row text-center d-block">
+					<a href="#my-portfolio" title="To Top"><i class="fa fa-angle-up"></i> </a>
+					
+				</div>
+				
+			</div>
+			
+		</footer>
+
+		<script type="text/javascript">
+			
+			/* smooth scroll jquery*/
+			$('html,body').smoothScroll(500);
+			/*Navbar transparent*/
+			var navcol = $(".navbar.navbar-dark");
+			var dark = "bg-dark";
+			var bannerimageheight = $('#home').height();
+			/*remove background color initially*/
+			navcol.removeClass(dark);
+			/*add color when image is scrolled*/
+			$(window).scroll(function(){
+				if($(this).scrollTop() > (bannerimageheight-50)){navcol.addClass(dark);}
+				else{navcol.removeClass(dark);}
+			})
+
+
+			function openModal(){
+				document.getElementById('my-modal').style.display = "inline-flex";
+				/* hide body scroll bar*/
+				document.body.style.overflow ="hidden";
+				/*hide nav bar
+				document.getElementById('my-navbar').style.navbar = "none"; */
+			}
+
+			function closeModal(){
+				document.getElementById('my-modal').style.display= "none";
+				document.body.style.overflow = "auto";
+			}
+
+			var slideIndexJS =1;
+			showSlides(slideIndexJS);
+
+			function changeSlides(n){
+				showSlides(slideIndexJS += n);
+			}
+
+			function currentSlide(n){
+				showSlides(slideIndexJS = n);
+				
+			}
+
+			function showSlides(n)
+			{
+				var i;
+
+				var slidesJS = document.getElementsByClassName("my-slides");
+
+				if (n > slidesJS.length) 
+					{ slideIndexJS = 1; }
+
+				if (n < 1) 
+					{ slideIndexJS = slideIndexJS.length;}
+
+				for (var i = 0; i< slidesJS.length; i++)
+				 { slidesJS[i].style.display = "none"; }
+
+				slidesJS[slideIndexJS-1].style.display = "block";
+			}
+		</script>
+		
+	</body>
+</html>
+
