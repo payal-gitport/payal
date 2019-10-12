@@ -4,10 +4,12 @@
 	<title>The Blues | Payal Meena</title>
 	<meta charset="utf-8">
 
-	<!-- Small Icon that appears in the brower's tab -->
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">					
+	<!-- Small Icon that appears in the brower's tab 
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	-->				
 
 	<!-- To ensure proper rendering and touch zooming in Mobile Phones-->
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
 
 	<!-- For Font-Aswesome Icons -->
@@ -26,10 +28,11 @@
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<script type="text/javascript" src="js/wow.min.js"></script>
 	<script type="text/javascript">new WOW().init();</script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 	<!-- javascript particle -->
-	<script src="particles.js"></script>
+	
 
 
 	<!-- CSS -->
@@ -290,9 +293,23 @@
 <body id='my-portfolio' data-spy="scroll" data-target =".navbar" data-offset="60">
 		<!------Header -->
 		<header class="container-fluid bg-header" id = "home">
+			<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
 			<div class="header-bg-gray">
 				<nav class="navbar navbar-dark navbar-expand-md bg-dark text-center fixed-top " id = "my-navbar">
-					<a href="#home" class="navbar-brand" style="height: 65px ">SimpleBlue </a>
+					<a href="#home" class="navbar-brand" style="height: 65px ">The Blue </a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon" ></span>
 					</button>
 					<!-- NAVBAR LINKS -->
@@ -424,10 +441,11 @@
 			var navcol = $(".navbar.navbar-dark");
 			var dark = "bg-dark";
 			var bannerimageheight = $('#home').height();
-			
-
-
-			
+			navcol.removeClass(dark);
+			$(window).scroll(function(){
+				if($(this).scrollTop()>(bannerimageheight)){navcol.addClass(dark);}
+					else{ navcol.removeClass(dark);}
+			})	
 		</script>
 		
 	</body>
